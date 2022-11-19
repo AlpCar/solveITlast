@@ -3,7 +3,7 @@ import 'package:solveit_proto/View/components/homeQuizListCard.dart';
 import 'package:solveit_proto/View/quiz/fke/demoVquiz_list_screen_widget.dart';
 
 import '../Models/Config.dart';
-import '../Models/Queries/queries.dart';
+import '../Models/queries.dart';
 import 'pointshop/point_shop_list_widget.dart';
 import 'profile/profile_screen_widget.dart';
 import 'quiz/quiz_create_Init_Screen.dart';
@@ -251,7 +251,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                               InkWell(
                                 onTap: () async {
                                   await launchURL(
-                                      'https://cse.yu.ac.kr/cse/index.do');
+                                      'http://localhost:3000');
                                 },
                                 child: Image.asset(
                                   'assets/images/logo.png',
@@ -326,7 +326,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                           await Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => DemoQuizList(),
+                              builder: (context) => QuizListScreenWidget(),
                             ),
                           );
                         },

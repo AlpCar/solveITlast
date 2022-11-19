@@ -1,5 +1,8 @@
+import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 //import '../flutter_flow/random_data_util.dart' as random_data;
+import '../../Models/Config.dart';
+import '../../Models/queries.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -222,6 +225,16 @@ class _ForgotPasswordScreenWidgetState
                 padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
                 child: FFButtonWidget(
                   onPressed: () async {
+                    Config config = Config();
+                    GraphQLClient _client = config.clientToQuery();
+                    QueryResult result = await _client.query(QueryOptions(
+                      document: gql(Queries.userInfo,),
+                      variables: {
+                        'ID': emailAddressController!.value.text,
+                      },
+                    ),
+                    );
+
                     await launchUrl(Uri(
                         scheme: 'mailto',
                         path: emailAddressController!.text,

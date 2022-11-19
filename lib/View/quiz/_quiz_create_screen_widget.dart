@@ -1,6 +1,6 @@
 import 'package:graphql_flutter/graphql_flutter.dart';
 import '../../Models/Config.dart';
-import '../../Models/Queries/queries.dart';
+import '../../Models/queries.dart';
 import '../components/candidate_widget.dart';
 import '../components/quiz_blank_create_widget.dart';
 import '../quiz/quiz_info_screen_widget.dart';
