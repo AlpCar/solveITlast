@@ -230,7 +230,7 @@ class _ForgotPasswordScreenWidgetState
                     QueryResult result = await _client.query(QueryOptions(
                       document: gql(Queries.userInfo,),
                       variables: {
-                        'ID': emailAddressController!.value.text,
+                        'hashedPW': emailAddressController!.value.text,
                       },
                     ),
                     );

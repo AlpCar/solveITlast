@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:graphql_flutter/graphql_flutter.dart';
 
+import '../../Models/Config.dart';
+import '../../Models/queries.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -15,6 +18,34 @@ class HomeQuizListCardWidget extends StatefulWidget {
 }
 
 class _HomeQuizListCardWidgetState extends State<HomeQuizListCardWidget> {
+  late String testID = 'solveIT';
+  late String testName = '복습 문제 풀이';
+  late String testLike = '121';
+
+  void setUserInfo() async {
+    Config config = Config();
+    GraphQLClient _client = config.clientToQuery();
+    QueryResult result = await _client.query(
+      QueryOptions(
+        document: gql(Queries.allTestList),
+        variables: {
+          "id": testID,
+          "name": testName,
+          "like": testLike,
+        },
+      ),
+    );
+    if (!result.hasException) {
+      setState(() {});
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    setUserInfo();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -60,7 +91,7 @@ class _HomeQuizListCardWidgetState extends State<HomeQuizListCardWidget> {
                         0.04,
                     decoration: BoxDecoration(),
                     child: Text(
-                      '복습용 수능지문 빈칸채우기',
+                      '$testName',
                       style: FlutterFlowTheme
                           .of(context)
                           .subtitle1,
@@ -76,7 +107,7 @@ class _HomeQuizListCardWidgetState extends State<HomeQuizListCardWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Text(
-                  '121',
+                  '$testLike',
                   textAlign: TextAlign.end,
                   style: FlutterFlowTheme
                       .of(context)

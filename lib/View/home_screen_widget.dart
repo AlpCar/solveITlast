@@ -30,9 +30,9 @@ class HomeScreenWidget extends StatefulWidget {
 
 class _HomeScreenWidgetState extends State<HomeScreenWidget> {
   PageController? pageViewController;
-  String? nicknameController;
-  String? tierController;
-  String? pointController;
+  String? nicknameController = 'SolveIT';
+  String? tierController = '3';
+  String? pointController = '1660';
   final scaffoldKey = GlobalKey<ScaffoldState>();
   int quizItemCount = 3;
 
@@ -121,7 +121,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                         );
                                       },
                                       child: Text(
-                                        ' csc@mail.com',
+                                        '$nicknameController',
                                         style: FlutterFlowTheme.of(context)
                                             .title2
                                             .override(
@@ -163,7 +163,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                             ),
                                       ),
                                       Text(
-                                        '3',
+                                        '$tierController',
                                         style: FlutterFlowTheme.of(context)
                                             .title1
                                             .override(
@@ -199,7 +199,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                             CrossAxisAlignment.center,
                                         children: [
                                           Text(
-                                            '2770',
+                                            '$pointController',
                                             style: FlutterFlowTheme.of(context)
                                                 .title1
                                                 .override(
@@ -569,223 +569,6 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                           children: <Widget> [for(int i = 0; i<quizItemCount; i++)
                             HomeQuizListCardWidget(),
                           ]
-                        ),
-
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 4),
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.92,
-                            height: MediaQuery.of(context).size.height * 0.1,
-                            decoration: BoxDecoration(
-                              color:
-                              FlutterFlowTheme.of(context).primaryBackground,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Padding(
-                                  padding:
-                                  EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        width: MediaQuery.of(context)
-                                            .size
-                                            .width *
-                                            0.40,
-                                        height: MediaQuery.of(context)
-                                            .size
-                                            .height *
-                                            0.04,
-                                        decoration: BoxDecoration(),
-                                        child: Text(
-                                          '복습용 수능지문 빈칸채우기',
-                                          style: FlutterFlowTheme.of(context)
-                                              .subtitle1,
-                                          overflow: TextOverflow.fade,
-                                          maxLines: 1,
-                                          softWrap: false,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Text(
-                                      '121',
-                                      textAlign: TextAlign.end,
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle2
-                                          .override(
-                                        fontFamily: 'Poppins',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                      ),
-                                    ),
-                                    Icon(
-                                      Icons.favorite_rounded,
-                                      color:
-                                      FlutterFlowTheme.of(context).alternate,
-                                      size: 24,
-                                    ),
-                                  ],
-                                ),
-                                Padding(
-                                  padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
-                                  child: FFButtonWidget(
-                                    onPressed: () async {
-                                      await Navigator.push(
-                                        context,
-                                        PageTransition(
-                                          type: PageTransitionType.leftToRight,
-                                          duration: Duration(milliseconds: 300),
-                                          reverseDuration:
-                                          Duration(milliseconds: 300),
-                                          child: QuizInfoScreenWidget(),
-                                        ),
-                                      );
-                                    },
-                                    text: '도전하기',
-                                    options: FFButtonOptions(
-                                      width: 100,
-                                      height: 50,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .subtitle2
-                                          .override(
-                                        fontFamily: 'Poppins',
-                                        color: Colors.black,
-                                      ),
-                                      elevation: 3,
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        width: 3,
-                                      ),
-                                      borderRadius: BorderRadius.circular(30),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 4),
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.92,
-                            height: MediaQuery.of(context).size.height * 0.1,
-                            decoration: BoxDecoration(
-                              color:
-                              FlutterFlowTheme.of(context).primaryBackground,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Padding(
-                                  padding:
-                                  EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        width: MediaQuery.of(context)
-                                            .size
-                                            .width *
-                                            0.40,
-                                        height: MediaQuery.of(context)
-                                            .size
-                                            .height *
-                                            0.04,
-                                        decoration: BoxDecoration(),
-                                        child: Text(
-                                          '프로그래머 어휘 학습문제',
-                                          style: FlutterFlowTheme.of(context)
-                                              .subtitle1,
-                                          overflow: TextOverflow.fade,
-                                          maxLines: 1,
-                                          softWrap: false,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Text(
-                                      '121',
-                                      textAlign: TextAlign.end,
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle2
-                                          .override(
-                                        fontFamily: 'Poppins',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                      ),
-                                    ),
-                                    Icon(
-                                      Icons.favorite_rounded,
-                                      color:
-                                      FlutterFlowTheme.of(context).alternate,
-                                      size: 24,
-                                    ),
-                                  ],
-                                ),
-                                Padding(
-                                  padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
-                                  child: FFButtonWidget(
-                                    onPressed: () async {
-                                      await Navigator.push(
-                                        context,
-                                        PageTransition(
-                                          type: PageTransitionType.leftToRight,
-                                          duration: Duration(milliseconds: 300),
-                                          reverseDuration:
-                                          Duration(milliseconds: 300),
-                                          child: QuizInfoScreenWidget(),
-                                        ),
-                                      );
-                                    },
-                                    text: '도전하기',
-                                    options: FFButtonOptions(
-                                      width: 100,
-                                      height: 50,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .subtitle2
-                                          .override(
-                                        fontFamily: 'Poppins',
-                                        color: Colors.black,
-                                      ),
-                                      elevation: 3,
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        width: 3,
-                                      ),
-                                      borderRadius: BorderRadius.circular(30),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
                         ),
                       ],
                     ),

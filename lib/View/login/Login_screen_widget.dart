@@ -295,14 +295,6 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget> {
                           },
                         ),
                       );
-                      if(result!=null){
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomeScreenWidget(),
-                          ),
-                        );
-                      }
                     },
                     text: '로그인',
                     options: FFButtonOptions(
@@ -324,7 +316,7 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget> {
                     ),
                   ),
                 ),
-                Row(
+                /*Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
@@ -363,7 +355,7 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget> {
                       ),
                     ),
                   ],
-                ),
+                ),*/
               ],
             ),
           ),
