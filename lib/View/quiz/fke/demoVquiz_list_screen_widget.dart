@@ -10,14 +10,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'demoQuizTakeTest.dart';
 
-class FakeVQuizList extends StatefulWidget {
-  const FakeVQuizList({Key? key}) : super(key: key);
+class DemoQuizList extends StatefulWidget {
+  const DemoQuizList({Key? key}) : super(key: key);
 
   @override
-  _FakeVQuizListState createState() => _FakeVQuizListState();
+  _DemoQuizListState createState() => _DemoQuizListState();
 }
 
-class _FakeVQuizListState extends State<FakeVQuizList> {
+class _DemoQuizListState extends State<DemoQuizList> {
   TextEditingController? textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 

@@ -1,10 +1,9 @@
 import 'package:graphql_flutter/graphql_flutter.dart';
-import '../../../Models/Queries/question_queries.dart';
+import '../../../Models/Queries/queries.dart';
 import '../../components/Lists.dart';
 import '../../../Models/Config.dart';
 import '../../components/candidate_widget.dart';
 import '../../flutter_flow/flutter_flow_widgets.dart';
-import '../../../Models/Queries/Auth_queries.dart';
 import '../../flutter_flow/flutter_flow_drop_down.dart';
 import '../../flutter_flow/flutter_flow_icon_button.dart';
 import '../../flutter_flow/flutter_flow_radio_button.dart';
@@ -136,7 +135,7 @@ class _CFillBlankQuizState extends State<CFillBlankQuiz> {
               GraphQLClient _client = config.clientToQuery();
               QueryResult result = await _client.mutate(
                 MutationOptions(
-                  document: gql(QuestionQueries.createQuestion,),
+                  document: gql(Queries.createTest,),
                   variables: {
                     "name": testNameController,
                     "paragraph": paragraphController,

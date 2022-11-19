@@ -4,7 +4,6 @@ import '../../components/Lists.dart';
 import '../../../Models/Config.dart';
 import '../../components/candidate_widget.dart';
 import '../../flutter_flow/flutter_flow_widgets.dart';
-import '../../../Models/Queries/Auth_queries.dart';
 import '../../flutter_flow/flutter_flow_drop_down.dart';
 import '../../flutter_flow/flutter_flow_icon_button.dart';
 import '../../flutter_flow/flutter_flow_radio_button.dart';
@@ -180,7 +179,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
                context,
                MaterialPageRoute(
                  builder: (context) =>
-                     QuizCreateScreenCopy2CopyWidget(),
+                     DemoQuizCreate1(),
                ),
              );
 

@@ -1,7 +1,6 @@
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:solveit_proto/View/components/homeQuizListCard.dart';
 import 'package:solveit_proto/View/quiz/fke/demoVquiz_list_screen_widget.dart';
-import 'package:solveit_proto/View/quiz/fke/demoquiz_list_screen_widget.dart';
 
 import '../Models/Config.dart';
 import '../Models/Queries/queries.dart';
@@ -327,7 +326,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                           await Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => FakeVQuizList(),
+                              builder: (context) => DemoQuizList(),
                             ),
                           );
                         },

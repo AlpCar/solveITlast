@@ -11,8 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class QuizCreateScreenCopy2CopyCopy2Widget extends StatefulWidget {
-  const QuizCreateScreenCopy2CopyCopy2Widget({
+class DemoQuizCreate2 extends StatefulWidget {
+  const DemoQuizCreate2({
     Key? key,
     this.testID,
   }) : super(key: key);
@@ -20,12 +20,12 @@ class QuizCreateScreenCopy2CopyCopy2Widget extends StatefulWidget {
   final String? testID;
 
   @override
-  _QuizCreateScreenCopy2CopyCopy2WidgetState createState() =>
-      _QuizCreateScreenCopy2CopyCopy2WidgetState();
+  _DemoQuizCreate2State createState() =>
+      _DemoQuizCreate2State();
 }
 
-class _QuizCreateScreenCopy2CopyCopy2WidgetState
-    extends State<QuizCreateScreenCopy2CopyCopy2Widget> {
+class _DemoQuizCreate2State
+    extends State<DemoQuizCreate2> {
   String? dropDownValue;
   TextEditingController? textController;
   double? ratingBarValue;

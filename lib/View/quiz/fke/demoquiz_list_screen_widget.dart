@@ -7,14 +7,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'demoQuizTakeTest.dart';
 
-class FakeQuizList extends StatefulWidget {
-  const FakeQuizList({Key? key}) : super(key: key);
+class DemoQuizList extends StatefulWidget {
+  const DemoQuizList({Key? key}) : super(key: key);
 
   @override
-  _FakeQuizListState createState() => _FakeQuizListState();
+  _DemoQuizListState createState() => _DemoQuizListState();
 }
 
-class _FakeQuizListState extends State<FakeQuizList> {
+class _DemoQuizListState extends State<DemoQuizList> {
   TextEditingController? textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 

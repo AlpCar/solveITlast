@@ -1,9 +1,9 @@
 import 'package:graphql_flutter/graphql_flutter.dart';
+import '../../../Models/Queries/queries.dart';
 import '../../components/Lists.dart';
 import '../../../Models/Config.dart';
 import '../../components/candidate_widget.dart';
 import '../../flutter_flow/flutter_flow_widgets.dart';
-import '../../../Models/Queries/Auth_queries.dart';
 import '../../flutter_flow/flutter_flow_drop_down.dart';
 import '../../flutter_flow/flutter_flow_icon_button.dart';
 import '../../flutter_flow/flutter_flow_radio_button.dart';
@@ -130,9 +130,9 @@ class _CodingTestQuizState extends State<CodingTestQuiz> {
               GraphQLClient _client = config.clientToQuery();
               QueryResult result = await _client.mutate(
                 MutationOptions(
-                  document: gql(AuthQueries.createQuestionInput,),
+                  document: gql(Queries.createTest,),
                   variables: {
-                   /*"name": testNameController,
+                  /* "name": testNameController,
                     "paragraph": paragraphController,
                     "answers": answersController,
                     "explanation": explanationController,

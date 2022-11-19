@@ -12,8 +12,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../quiz_clear_screen_widget.dart';
 
-class QuizCreateScreenCopy2CopyWidget extends StatefulWidget {
-  const QuizCreateScreenCopy2CopyWidget({
+class DemoQuizCreate1 extends StatefulWidget {
+  const DemoQuizCreate1({
     Key? key,
     this.testID,
   }) : super(key: key);
@@ -21,12 +21,12 @@ class QuizCreateScreenCopy2CopyWidget extends StatefulWidget {
   final String? testID;
 
   @override
-  _QuizCreateScreenCopy2CopyWidgetState createState() =>
-      _QuizCreateScreenCopy2CopyWidgetState();
+  _DemoQuizCreate1State createState() =>
+      _DemoQuizCreate1State();
 }
 
-class _QuizCreateScreenCopy2CopyWidgetState
-    extends State<QuizCreateScreenCopy2CopyWidget> {
+class _DemoQuizCreate1State
+    extends State<DemoQuizCreate1> {
   String? dropDownValue;
   TextEditingController? textController;
   double? ratingBarValue;

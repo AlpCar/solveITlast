@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:solveit_proto/View/welcome_screen_widget.dart';
 import '../../Models/Config.dart';
-import '../../Models/Queries/Auth_queries.dart';
+import '../../Models/Queries/queries.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -288,19 +288,21 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget> {
                       Config config = Config();
                       GraphQLClient _client = config.clientToQuery();
                       QueryResult result = await _client.query(QueryOptions(
-                          document: gql(AuthQueries.logIn,),
+                          document: gql(Queries.logIn,),
                           variables: {
                             'ID': emailAddressController!.value.text,
                             'hashedPW': passwordLoginController!.value.text
                           },
                         ),
                       );
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomeScreenWidget(),
-                        ),
-                      );
+                      if(result!=null){
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreenWidget(),
+                          ),
+                        );
+                      }
                     },
                     text: '로그인',
                     options: FFButtonOptions(

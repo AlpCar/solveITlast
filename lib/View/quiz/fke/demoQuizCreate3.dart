@@ -13,8 +13,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../quiz_list_screen_widget.dart';
 import 'demoquiz_list_screen_widget.dart';
 
-class QuizCreateScreenCopy2CopyCopy2CopyWidget extends StatefulWidget {
-  const QuizCreateScreenCopy2CopyCopy2CopyWidget({
+class DemoQuizCreate3 extends StatefulWidget {
+  const DemoQuizCreate3({
     Key? key,
     this.testID,
   }) : super(key: key);
@@ -22,12 +22,12 @@ class QuizCreateScreenCopy2CopyCopy2CopyWidget extends StatefulWidget {
   final String? testID;
 
   @override
-  _QuizCreateScreenCopy2CopyCopy2CopyWidgetState createState() =>
-      _QuizCreateScreenCopy2CopyCopy2CopyWidgetState();
+  _DemoQuizCreate3State createState() =>
+      _DemoQuizCreate3State();
 }
 
-class _QuizCreateScreenCopy2CopyCopy2CopyWidgetState
-    extends State<QuizCreateScreenCopy2CopyCopy2CopyWidget> {
+class _DemoQuizCreate3State
+    extends State<DemoQuizCreate3> {
   String? dropDownValue;
   TextEditingController? textController;
   double? ratingBarValue;
@@ -82,7 +82,7 @@ class _QuizCreateScreenCopy2CopyCopy2CopyWidgetState
               await Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FakeQuizList(),
+                  builder: (context) => DemoQuizList(),
                 ),
               );
             },
